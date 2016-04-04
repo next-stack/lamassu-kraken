@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+'use strict'
+
+var LamassuConfig = require('lamassu-config')
+var promptly = require('promptly')
+
+var config = new LamassuConfig()
+
+console.log('\nSetting up the BitStamp ticker and trader plugin.\n')
+console.log('Please enter your API credentials.\n')
+promptly.prompt('API Key: ', function (keyErr, key) {
+  promptly.password('Secret: ', function (secretErr, secret) {
+    updateDb(key, secret, function (err) {
+      if (err) throw err
+      console.log('\nSuccess.')
+    })
+  })
+})
+
+function updateDb (key, secret, callback) {
+  var newConfig = {
+    exchanges: {
+      plugins: {
+        settings: {
+          kraken: {
+            key: key,
+            secret: secret
+          }
+        },
+        current: {
+          ticker: 'kraken',
+          trade: 'kraken'
+        }
+      }
+    }
+  }
+  config.mergeConfig(newConfig, callback)
+}
