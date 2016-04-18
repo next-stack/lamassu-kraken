@@ -1,6 +1,6 @@
 {
   "name": "lamassu-kraken",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "lamassu-server plugin for the Kraken exchange",
   "main": "index.js",
   "scripts": {
