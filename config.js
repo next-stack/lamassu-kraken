@@ -1,10 +1,11 @@
 'use strict'
 
-var _ = require('lodash')
+var trader = require('./lib/trader')
 
 exports.NAME = 'Kraken'
 exports.SUPPORTED_MODULES = ['ticker', 'trader']
 
 exports.config = function config (localConfig) {
-  if (localConfig) _.merge(exports, localConfig)
+  console.log(localConfig)
+  if (localConfig) trader.config(localConfig)
 }
