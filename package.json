@@ -21,7 +21,7 @@
     "bignumber.js": "^2.3.0",
     "es6-promise": "^3.1.2",
     "kraken-api": "^0.1.7",
-    "lamassu-config": "^0.4.3",
+    "lamassu-config": "^0.4.4",
     "lodash": "^4.8.1",
     "promptly": "^1.1.0"
   }
