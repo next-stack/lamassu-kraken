@@ -17,12 +17,10 @@
   },
   "homepage": "https://github.com/lamassu/lamassu-kraken",
   "dependencies": {
-    "axios": "^0.9.1",
-    "bignumber.js": "^2.3.0",
-    "es6-promise": "^3.1.2",
+    "axios": "^0.16.0",
+    "bignumber.js": "^4.0.0",
     "kraken-api": "^0.1.7",
     "lamassu-config": "^0.4.4",
-    "lodash": "^4.8.1",
-    "promptly": "^1.1.0"
+    "lodash": "^4.8.1"
   }
 }
